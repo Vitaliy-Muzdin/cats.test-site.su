@@ -1,0 +1,286 @@
+/*~~~~  Шрифт OpenSans  ~~~~*/
+@font-face
+    font-family: title
+    src: url('/fonts/Exo2.0-Thin.otf')
+/*~~~~  Шрифт OpenSans^  ~~~~*/
+
+/*~~~~  Шрифт OpenSans  ~~~~*/
+@font-face
+    font-family: OpenSans_Regular
+    src: url('/fonts/openSans/OpenSans-Regular.ttf')
+@font-face
+    font-family: OpenSans_Italic
+    src: url('/fonts/openSans/OpenSans-Italic.ttf')
+@font-face
+    font-family: OpenSans_Bold
+    src: url('/fonts/openSans/OpenSans-Bold.ttf')
+@font-face
+    font-family: OpenSans_BoldItalic
+    src: url('/fonts/openSans/OpenSans-BoldItalic.ttf')
+/*~~~~  Шрифт OpenSans^  ~~~~*/
+
+
+$mainColor: #777777
+$blackColor: #000000
+
+html
+    margin: 0 !important
+body
+    font-family: OpenSans_Regular
+    width: 100%
+    overflow-x: hidden
+    height: 100%
+strong
+    font-family: OpenSans_Bold
+b
+    font-family: OpenSans_Bold
+
+.center
+    text-align: center
+.left
+    text-align: left
+.right
+    text-align: right
+.white
+    color: white
+.titleBlock
+    position: relative
+    font-size: 36px
+    font-family: title
+    margin-bottom: 21px
+
+.mainPage
+    position: relative
+    &__content
+        background: url(/images/fon.png)
+        display: table
+        height: 100%
+        width: 100%
+        position: fixed
+        left: 0
+        padding: 40px 0
+    &__content_center
+        display: table-cell
+        vertical-align: middle
+        text-align: center
+    &__element
+        width: 380px
+        //float: left
+        display: inline-table
+        position: relative
+        text-align: left
+    &__element_white
+        //background: white
+        //border: 4px solid #1698d9
+        padding: 4px
+        //border-radius: 70px 5px 5px 5px
+        position: relative
+        background: linear-gradient(135deg, transparent 37px, #fff 0), linear-gradient(45deg, transparent 15px, rgba(0, 0, 0, 0) 0)
+        background-size: 100% 100%
+        border-radius: 0 7px 7px 7px
+        &:before
+            content: ''
+            height: 50px
+            position: absolute
+            background: #fff
+            left: 50px
+            top: 0px
+            right: 0px
+            border: solid 0px #1698d9
+            border-width: 4px 4px 0px 0px
+            border-radius: 0 7px 0 0
+        &:after
+            content: ''
+            width: 70px
+            height: 62px
+            position: absolute
+            background: #fff
+            transform: rotateZ(-45deg)
+            left: 12px
+            top: 16px
+            border: solid 0px #1698d9
+            border-top-width: 5px
+    &__element_inner
+        position: relative
+        z-index: 1
+    &__element_back
+        content: " "
+        background-color: #FFF
+        position: absolute
+        bottom: 0px
+        left: 0px
+        right: 0px
+        top: 50px
+        border: solid 4px #1698d9
+        display: block
+        -webkit-border-radius: 3px
+        border-radius: 0 0 7px 7px
+        border-top-width: 0px
+    &__text
+        color: #555
+        padding: 17px 0 17px 50px
+        p
+            margin: 0
+    &__text_f16
+        font-size: 16px
+    &__title
+        padding: 0 0 0 50px
+        color: #000
+        font-weight: 700
+        &_big
+            font-size: 48px
+        &_small
+            font-size: 24px
+    &__image
+        img
+    &__weight
+        position: absolute
+        bottom: 10px
+        right: 10px
+        background: #1698d9
+        color: #fff
+        border-radius: 100px
+        padding: 7px 10px
+        line-height: 1
+        text-align: center
+    &__weightNumber
+        font-size: 41px
+    &__weightText
+        font-size: 21px
+    &__textButton
+        font-size: 12px
+        color: #ffffff
+        text-align: center
+        padding: 14px 0
+        a
+            text-decoration: none
+            color: #1698d9
+            border-bottom: 1px dashed #1698d9
+            transition: .5s
+        a:hover
+            text-decoration: none
+            border-bottom: 1px dashed #1698d9
+            transition: .5s
+        a:focus
+            text-decoration: none
+    .elem1
+        padding: 0 55px 0 0
+        cursor: pointer
+    .elem1.mainPage__element_active, .elem2.mainPage__element_active
+        .mainPage__element_white:before
+            border: solid 0px green
+            border-width: 4px 4px 0px 0px
+        .mainPage__element_back
+            border: solid 4px green
+            border-top-width: 0px
+        .mainPage__element_white:after
+            border: solid 0px green
+            border-top-width: 5px
+        .mainPage__weight
+            box-shadow: 0 0 26px 0px rgba(0, 0, 0, 0.71)
+            background: blue
+        .mainPage__element_back
+            background-color: #c8c8c8
+        .mainPage__element_white:before
+            background-color: #c8c8c8
+        .mainPage__element_white:after
+            background-color: #c8c8c8
+    .elem2
+        padding: 0 27.5px 0
+        cursor: pointer
+        .mainPage__element_white:before
+            border: solid 0px #d91667
+            border-width: 4px 4px 0px 0px
+        .mainPage__element_back
+            border: solid 4px #d91667
+            border-top-width: 0px
+        .mainPage__element_white:after
+            border: solid 0px #d91667
+            border-top-width: 5px
+        .mainPage__weight
+            padding: 7px 26px
+            background: #d91667
+    .elem3
+        padding: 0 0 0 55px
+        cursor: default
+        .mainPage__element_white:before
+            border: solid 0px #b3b3b3
+            border-width: 4px 4px 0px 0px
+            background:  rgba(241, 241, 241, 0.55)
+            z-index: 3
+        .mainPage__element_white:after
+            border: solid 0px #b3b3b3
+            border-top-width: 5px
+            //background:  rgba(241, 241, 241, 0.55)
+            z-index: 7
+            background: linear-gradient(45deg, transparent 23px, rgba(241,241,241,0.55) 0) top left,linear-gradient(315deg, transparent 23px, rgba(241,241,241,0.55) 0) top right,linear-gradient(-45deg, transparent 23px, rgba(238, 238, 238, 0) 0) bottom right,linear-gradient(45deg, transparent 23px, rgba(0, 0, 0, 0) 0) bottom left
+            background-size: 50% 50%
+            background-repeat: no-repeat
+        .mainPage__weight
+            padding: 7px 26px
+            background: #b3b3b3
+        .mainPage__element_back
+            border: solid 4px #b3b3b3
+            border-top-width: 0px
+            background: rgba(241, 241, 241, 0.55)
+            z-index: 5
+        .mainPage__textButton
+            color: #ffff66
+@media (max-width: 1199px)
+    .mainPage
+        .elem1
+            padding: 0 38px 0 0
+        .elem2
+            padding: 0 10.5px 0
+        .elem3
+            padding: 0 0 0 38px
+        &__element
+            width: 326px
+@media (max-width: 991px)
+    .mainPage
+        .elem1
+            padding: 0 25px 0
+        .elem2
+            padding: 0 25px 0
+        .elem3
+            padding: 0 25px 0
+        &__element
+            width: 370px
+        &__content
+            position: absolute
+@media (max-width: 767px)
+    .mainPage
+        .elem1
+            padding: 0 25px 0
+        .elem2
+            padding: 0 25px 0
+        .elem3
+            padding: 0 25px 0
+        &__element
+            width: 380px
+        &__content
+            position: absolute
+@media (max-width: 767px)
+    .mainPage
+        &__element
+            width: 100%
+            padding: 10px 12px !important
+            max-width: 380px
+/*~~~~  Стили кнопки "Вернкться к верхней части страницы"  ~~~~*/
+#toTop
+    position: fixed
+    z-index: 26000
+    background: rgba(0,0,0,0.5)
+    padding: 26px 17px
+    border-radius: 100px
+    color: #fff
+    bottom: 25px
+    left: 25px
+    line-height: 0.5
+    font-size: 35px
+    transition: .5s
+    cursor: pointer
+#toTop:hover
+    background: $mainColor
+    transition: .5s
+/*~~~~  Стили кнопки "Вернкться к верхней части страницы"^  ~~~~*/
